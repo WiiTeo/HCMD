@@ -4,6 +4,10 @@ import sys
 # HCMD #
 # By WiiTeo
 
+###################### SAV FILE ######################
+# Use this file if hcmd.py get problem.
+# just rename it 'hcmd.py' and copy this on ../
+
 # Check OS
 
 if os.name == "nt":
@@ -24,7 +28,7 @@ def clear_screen():
         print("Your os in unexpected for HCMD. We can't clear the screen")
 
 def annonce(text):
-    print("\t# " + text + " #\n")
+    print("\n\t# " + text + " #")
 
 def help_page():
     print("\nhelp\t\t\t : Help Page of HShell.")
@@ -34,8 +38,7 @@ def help_page():
     print("write\t\t\t : Create File")
     print("cd\t\t\t : Change Directory")
     print("cdback\t\t\t : Return to the principal dir")
-    print("hlib_install\t\t : Install HLIB library")
-    print("get\t\t\t : Download a file on the web")
+    print("hlib_install\t\t\t : Install HLIB library")
 
 def exit_with_code(code):
     print("Exit with code " + code + ".")
@@ -66,14 +69,12 @@ with change_dir("filesystem"):
         print(f"HCMD 1.0 (with Python {sys.version_info.major}.{sys.version_info.minor} for {systemos} OS)")
         print("\n Type 'help' to get the list of commands.\n")
 
-        annonce("Version 1.1 !")
-
         while (1):
 
             userType = input("H:/>")
 
             if userType == "help":
-                print(f"\nHCMD HShell, version 1.1 for {systemos}-Python.{sys.version_info.major}.{sys.version_info.minor}")
+                print(f"\nHCMD HShell, version 1.0 for {systemos}-Python.{sys.version_info.major}.{sys.version_info.minor}")
                 print("This is the list of commands for HShell.")
                 help_page()
 
@@ -148,5 +149,3 @@ with change_dir("filesystem"):
 
                     print(nurl + " is download in downloads folder.")
                     os.chdir("../")
-
-            # Lib Part #

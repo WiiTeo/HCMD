@@ -1,0 +1,2 @@
+elif userType == "example":
+    print("This is a example lib !")
