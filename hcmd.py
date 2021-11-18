@@ -63,7 +63,7 @@ class change_dir:
 clear_screen()
 with change_dir("filesystem"):
 
-        print(f"HCMD 1.0 (with Python {sys.version_info.major}.{sys.version_info.minor} for {systemos} OS)")
+        print(f"HCMD 1.1 (with Python {sys.version_info.major}.{sys.version_info.minor} for {systemos} OS)")
         print("\n Type 'help' to get the list of commands.\n")
 
         annonce("Version 1.1 !")
